@@ -2,7 +2,7 @@ const humanScore = document.querySelector(".score_human");
 const computerScore = document.querySelector(".score_computer");
 const score_title = document.querySelector(".score_title h3");
 
-function computerPlay() {
+function getComputerSelection() {
   const arr = ["rock", "paper", "scissor"];
   let randomIndex = Math.floor(Math.random() * arr.length);
   return arr[randomIndex];
