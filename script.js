@@ -7,6 +7,7 @@ function getComputerSelection() {
   let randomIndex = Math.floor(Math.random() * arr.length);
   return arr[randomIndex];
 }
+
 function getScore(computerSelection, playerSelection) {
   if (computerSelection === "rock" && playerSelection === "scissor") {
     return "computer";
@@ -29,7 +30,7 @@ let playerScores = 0;
 let computerScores = 0;
 let draw = 0;
 
-function game(playerSelection) {
+function playGame(playerSelection) {
   const computerSelection = getComputerSelection();
   let result = getScore(computerSelection, playerSelection);
   switch (result) {
