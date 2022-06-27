@@ -7,7 +7,7 @@ function computerPlay() {
   let randomIndex = Math.floor(Math.random() * arr.length);
   return arr[randomIndex];
 }
-function playRound(computerSelection, playerSelection) {
+function getScore(computerSelection, playerSelection) {
   if (computerSelection === "rock" && playerSelection === "scissor") {
     return "computer";
   } else if (computerSelection === "rock" && playerSelection === "paper") {
