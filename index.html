@@ -4,9 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rock, Paper, Scissor</title>
   </head>
   <body>
+    <main>
+      <header>
+        <h1>Rock, Paper, Scissor?</h1>
+      </header>
+      <main>
+        <section class="score_section">
+          <div class="human">
+            <img src="./image/human.png" alt="human" />
+            <h3 class="score score_human">0</h3>
+          </div>
+          <div class="score_title"><h3>Score</h3></div>
+          <div class="computer">
+            <img src="./image/computer.png" alt="computer" />
+            <h3 class="score score_computer">0</h3>
+          </div>
+        </section>
+        <section class="move_selection">
+          <div class="move" data-selection="rock">
+            <h3>Rock</h3>
+            <img src="./image/rock.png" alt="rock" />
+          </div>
+          <div class="move" data-selection="paper">
+            <h3>Paper</h3>
+            <img src="./image/paper.png" alt="paper" />
+          </div>
+          <div class="move" data-selection="scissor">
+            <h3>Scissor</h3>
+            <img src="./image/scissor.png" alt="scissor" />
+          </div>
+        </section>
+      </main>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
