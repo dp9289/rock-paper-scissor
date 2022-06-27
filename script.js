@@ -50,3 +50,12 @@ function playRound(computerSelection, playerSelection) {
   }
 
   game();
+
+const moves = document.querySelectorAll(".move");
+
+moves.forEach((move) =>
+  move.addEventListener("click", (e) => {
+    const selection = e.currentTarget.dataset.selection;
+    playGame(selection);
+  })
+);
