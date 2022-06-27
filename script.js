@@ -8,29 +8,19 @@ function computerPlay() {
   return arr[randomIndex];
 }
 function playRound(computerSelection, playerSelection) {
-  let playerChoice = playerSelection.toLowerCase();
-  console.log(`Computer Chooses: ${computerSelection}`);
-  console.log(`Player Chooses: ${playerChoice}`);
-  if (computerSelection === "rock" && playerChoice === "scissor") {
-    console.log("You Lose! Rock beats scissor\n");
-    return 0;
-  } else if (computerSelection === "rock" && playerChoice === "paper") {
-    console.log("You win! paper beats rock\n");
-    return 1;
-  } else if (computerSelection === "paper" && playerChoice === "scissor") {
-    console.log("You win! scissor beats paper\n");
-    return 1;
-  } else if (computerSelection === "paper" && playerChoice === "rock") {
-    console.log("You Lose! paper beats rock\n");
-    return 0;
-  } else if (computerSelection === "scissor" && playerChoice === "rock") {
-    console.log("You win! rock beats scissor\n");
-    return 1;
-  } else if (computerSelection === "scissor" && playerChoice === "paper") {
-    console.log("You Lose! scissor beats paper\n");
-    return 0;
+  if (computerSelection === "rock" && playerSelection === "scissor") {
+    return "computer";
+  } else if (computerSelection === "rock" && playerSelection === "paper") {
+    return "human";
+  } else if (computerSelection === "paper" && playerSelection === "scissor") {
+    return "human";
+  } else if (computerSelection === "paper" && playerSelection === "rock") {
+    return "computer";
+  } else if (computerSelection === "scissor" && playerSelection === "rock") {
+    return "human";
+  } else if (computerSelection === "scissor" && playerSelection === "paper") {
+    return "computer";
   } else {
-    console.log("it's a draw!\n");
     return "draw";
   }
 }
@@ -74,7 +64,6 @@ function game(playerSelection) {
   humanScore.innerText = playerScores;
   computerScore.innerText = computerScores;
 }
-
 
 const moves = document.querySelectorAll(".move");
 
