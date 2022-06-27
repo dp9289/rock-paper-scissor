@@ -1,3 +1,7 @@
+const humanScore = document.querySelector(".score_human");
+const computerScore = document.querySelector(".score_computer");
+const score_title = document.querySelector(".score_title h3");
+
 function computerPlay() {
   const arr = ["rock", "paper", "scissor"];
   let randomIndex = Math.floor(Math.random() * arr.length);
@@ -31,25 +35,46 @@ function playRound(computerSelection, playerSelection) {
   }
 }
 
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
-  let draw = 0;
-  for (let index = 0; index < 5; index++) {
-    let result = playRound(
-      computerPlay(),
-      prompt("Enter your choice: rock, paper or scissor!")
-    );
-    if (result === "draw") draw++;
-    else playerScore += result;
+let playerScores = 0;
+let computerScores = 0;
+let draw = 0;
+
+function game(playerSelection) {
+  const computerSelection = getComputerSelection();
+  let result = getScore(computerSelection, playerSelection);
+  switch (result) {
+    case "human":
+      playerScores++;
+      if (playerScores === 5) {
+        score_title.innerText = `You Won!!`;
+        playerScores = 0;
+        computerScores = 0;
+        draw = 0;
+        break;
+      }
+      score_title.innerText = `${playerSelection} beats ${computerSelection}!`;
+      break;
+    case "computer":
+      computerScores++;
+      if (computerScores === 5) {
+        score_title.innerText = `Computer Wins!!`;
+        playerScores = 0;
+        computerScores = 0;
+        draw = 0;
+        break;
+      }
+      score_title.innerText = `${computerSelection} beats ${playerSelection}!`;
+      break;
+
+    case "draw":
+      draw++;
+      score_title.innerText = "It's a draw!!";
+      break;
   }
-  computerScore = Math.abs(5 - playerScore - draw);
-  console.log("Computer Score: " + computerScore);
-  console.log("Player Score: " + playerScore);
-  console.log("Draw: " + draw);
+  humanScore.innerText = playerScores;
+  computerScore.innerText = computerScores;
 }
 
-game();
 
 const moves = document.querySelectorAll(".move");
 
