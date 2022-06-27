@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(205, 86%, 89%);
+  font-family: "Roboto", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+
+h1,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 700;
+  padding: 30px;
+  font-size: 50px;
+  flex-shrink: 1;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.score_section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 150px;
+  margin-top: 40px;
+  gap: 120px;
+  flex-wrap: wrap;
+}
+
+.score {
+  font-size: 35px;
+}
+.human,
+.computer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.score_title {
+  max-width: 50%;
+}
+.score_title > h3 {
+  font-size: 40px;
+}
+
+img {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+
+.move_selection {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.move {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px solid black;
+  width: 120px;
+  padding: 10px;
+  height: 120px;
+  box-shadow: 5px 5px 0 hsla(0, 0%, 0%, 0.65);
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+}
+
+.move:hover {
+  box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
+  cursor: pointer;
+  background-color: hsl(205, 86%, 85%);
+}
+
+.move > img {
+  width: 70px;
+  height: 70px;
+}
