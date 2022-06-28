@@ -1,3 +1,3 @@
 # rock-paper-scissor
 
-live: https://raw.githubusercontent.com/lookingcoolonavespa/rock-paper-scissors/
+live: https://dp9289.github.io/rock-paper-scissor/
